@@ -1,1 +1,1 @@
-Follow the instructions in the workshop to complete this lab.
+The drum samples are too long so it's a little glitchy, but c'est la vie. 
