@@ -7,8 +7,9 @@ const Instrument = (props) => {
   const isItSelected =
     props.selectedInstrument.name === thisInstrument ? " selected" : "";
   return (
-    <div
-      className={thisInstrument + isItSelected}
+    <div 
+    id = {thisInstrument}
+      className={'instrument' + isItSelected}
       onClick={() => props.selectInstrument(props.thisInstrument)}
     >
       {thisInstrument}

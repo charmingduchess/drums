@@ -19,10 +19,11 @@ class Machine extends React.Component {
     return (
       <div id="container">
         <AudioTag getRefs={this.getRefs} />
+        
         <Rack />
-        <Beats />
+        
         <Play refs = {this.refs}/>
-        <Tempo />
+        <Tempo refs = {this.refs}/>
       </div>
     );
   }

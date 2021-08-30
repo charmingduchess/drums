@@ -6,8 +6,8 @@ import playFunc from './playFunc'
 
 const initialState = {
   interval: 0,
-  BPM: 128,
-  selectedInstrument: {},
+  BPM: 0,
+  selectedInstrument: instruments[0],
   instruments: instruments,
   beat: 0,
 };
@@ -80,14 +80,14 @@ const changeBPM = (BPM) => {
     BPM,
   };
 };
-export const makeItChange = (bpm) => {
+export const makeItChange = (bpm,refs) => {
   return (dispatch, getState) => {
     const state = getState();
     if (state.interval !== 0) {
       dispatch(makeItStop());
       dispatch(changeBPM(bpm));
       dispatch(updateBeat(state.beat+1))
-      dispatch(makeItGo());
+      dispatch(makeItGo(refs));
     } else dispatch(changeBPM(bpm));
   };
 };
